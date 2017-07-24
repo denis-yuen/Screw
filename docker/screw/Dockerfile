@@ -47,3 +47,4 @@ RUN mkdir -p /home/ubuntu/bin
 RUN chown -R ubuntu:ubuntu /home/ubuntu
 RUN mv bin/* /home/ubuntu/bin/
 RUN export PATH=$PATH:/home/ubuntu/bin
+RUN apt-get -y -m update && install tree
