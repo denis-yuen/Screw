@@ -3,6 +3,7 @@ FROM quay.io/epigenomicscrew/base
 
 USER root
 RUN apt-get -y -m update && apt-get install -y zlib1g-dev lib32z1-dev
+RUN apt-get -y -m update && install tree
 USER ubuntu
 
 USER ubuntu
@@ -47,4 +48,3 @@ RUN mkdir -p /home/ubuntu/bin
 RUN chown -R ubuntu:ubuntu /home/ubuntu
 RUN mv bin/* /home/ubuntu/bin/
 RUN export PATH=$PATH:/home/ubuntu/bin
-RUN apt-get -y -m update && install tree
