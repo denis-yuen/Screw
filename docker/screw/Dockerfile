@@ -3,7 +3,7 @@ FROM quay.io/epigenomicscrew/base
 
 USER root
 RUN apt-get -y -m update && apt-get install -y zlib1g-dev lib32z1-dev
-RUN apt-get -y -m update && install tree
+RUN apt-get -y -m update && apt-get install -y tree
 USER ubuntu
 
 USER ubuntu
